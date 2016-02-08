@@ -1,0 +1,16 @@
+{
+  "name": "uif-ui-myotest-step-analysis-wrd",
+  "version": "1.0.0",
+  "description": "UIFramework bla bla bla",
+  "keywords": [],
+  "author": "Myotest",
+  "repository": {
+    "url": "",
+    "type": "git"
+  },
+  "homepage": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "uiframework": "^2.0.0"
+  }
+}
