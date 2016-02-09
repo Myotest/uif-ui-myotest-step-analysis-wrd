@@ -1,42 +1,46 @@
-/*
- * Copyright (c) 2016, ARM Limited, All Rights Reserved
- * SPDX-License-Identifier: Apache-2.0
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may
- * not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/* **************************************************************************
+*
+*
+     __  __             _            _      _____             
+    |  \/  |           | |          | |    / ____|    /\      
+    | \  / |_   _  ___ | |_ ___  ___| |_  | (___     /  \     
+    | |\/| | | | |/ _ \| __/ _ \/ __| __|  \___ \   / /\ \    
+    | |  | | |_| | (_) | ||  __/\__ \ |_   ____) | / ____ \ _ 
+    |_|  |_|\__, |\___/ \__\___||___/\__| |_____(_)_/    \_(_)
+             __/ |                                            
+            |___/                                             
+*
+* Copyright (c) 2004-2016 Myotest SA
+*
+* PackageLicenseDeclared: Apache-2.0 
+* 
+* Licensed under the Apache License, Version 2.0 (the "License"); 
+* you may not use this file except in compliance with the License. 
+* You may obtain a copy of the License at 
+* 
+*     http://www.apache.org/licenses/LICENSE-2.0 
+* 
+* Unless required by applicable law or agreed to in writing, software 
+* distributed under the License is distributed on an "AS IS" BASIS, 
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+* See the License for the specific language governing permissions and 
+* limitations under the License. 
+****************************************************************************/
 
 #include "uif-ui-myotest-step-analysis-wrd/StepAnalysisTable.h"
 
 #include "UIFramework/UITextView.h"
 
-
-#if 0
-#include "swo/swo.h"
-#define printf(...) { swoprintf(__VA_ARGS__); }
-#else
-#define printf(...)
-#endif
-
 typedef enum {
-  CELL_TOP_FILLER = 0,
-  CELL_WALKING_STEPS_TITLE,
-  CELL_MID_FILLER_1,
-  CELL_WALKING_STEPS_VALUE,
-  CELL_MID_FILLER_2,
-  CELL_RUNNING_STEPS_TITLE,
-  CELL_MID_FILLER_3,
-  CELL_RUNNING_STEPS_VALUE,
-  CELL_END_FILLER
+    CELL_TOP_FILLER = 0,
+    CELL_WALKING_STEPS_TITLE,
+    CELL_MID_FILLER_1,
+    CELL_WALKING_STEPS_VALUE,
+    CELL_MID_FILLER_2,
+    CELL_RUNNING_STEPS_TITLE,
+    CELL_MID_FILLER_3,
+    CELL_RUNNING_STEPS_VALUE,
+    CELL_END_FILLER
 } entries_t;
 
 SharedPointer<UIView> StepAnalysisTable::viewAtIndex(uint32_t index) const
