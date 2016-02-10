@@ -2,15 +2,18 @@
   "name": "uif-ui-myotest-step-analysis-wrd",
   "version": "1.0.0",
   "description": "UIFramework bla bla bla",
-  "keywords": [],
-  "author": "Myotest",
+  "keywords": [
+    "Myotest",
+    "myotest"
+    ],
+  "author": "Steve Devènes <std@myotest.com>",
   "repository": {
     "url": "",
     "type": "git"
   },
-  "homepage": "",
+  "homepage": "www.myotest.com",
   "license": "Apache-2.0",
   "dependencies": {
-    "uiframework": "^2.0.0"
+    "uiframework": "~2.0.0"
   }
 }
