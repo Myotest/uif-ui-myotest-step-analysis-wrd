@@ -29,8 +29,6 @@
 
 #include "uif-ui-myotest-step-analysis-wrd/StepAnalysisTable.h"
 
-#include "UIFramework/UITextView.h"
-
 typedef enum {
     CELL_TOP_FILLER = 0,
     CELL_WALKING_STEPS_TITLE,
@@ -47,6 +45,9 @@ SharedPointer<UIView> StepAnalysisTable::viewAtIndex(uint32_t index) const
 {
     UIView* cell = NULL;
 
+    UITextMonitorView<int32_t>* textMonitorViewWalkStep = NULL;
+    UITextMonitorView<int32_t>* textMonitorViewRunStep = NULL;
+
     switch(index)
     {
         case CELL_WALKING_STEPS_TITLE:
@@ -54,7 +55,8 @@ SharedPointer<UIView> StepAnalysisTable::viewAtIndex(uint32_t index) const
                             break;
 
         case CELL_WALKING_STEPS_VALUE:
-                            cell = new UITextView("test", &Font_Menu);
+                            textMonitorViewWalkStep = new UITextMonitorView<int32_t>(&myoAPI_getWalkingStepCounter,"%4d", &Font_Menu, 500);
+                            cell = (UITextView*)textMonitorViewWalkStep;
                             break;
 
         case CELL_RUNNING_STEPS_TITLE:
@@ -62,7 +64,8 @@ SharedPointer<UIView> StepAnalysisTable::viewAtIndex(uint32_t index) const
                             break;
 
         case CELL_RUNNING_STEPS_VALUE:
-                            cell = new UITextView("test", &Font_Menu);
+                            textMonitorViewRunStep = new UITextMonitorView<int32_t>(&myoAPI_getRunningStepCounter,"%4d", &Font_Menu, 500);
+                            cell = (UITextView*)textMonitorViewRunStep;
                             break;
 
         case CELL_TOP_FILLER:

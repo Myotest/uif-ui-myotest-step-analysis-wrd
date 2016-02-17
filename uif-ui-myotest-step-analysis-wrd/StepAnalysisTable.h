@@ -31,6 +31,12 @@
 #define __UIF_UI_MYOTEST_STEP_ANALYSIS_TABLE_H__
 
 #include "UIFramework/UIView.h"
+#include "UIFramework/UITextMonitorView.h"
+#include "UIFramework/UITextView.h"
+
+#include "core-util/SharedPointer.h"
+
+#include "myotest-step-analysis-library/wrd_public.h"
 
 class StepAnalysisTable : public UIView::Array
 {
