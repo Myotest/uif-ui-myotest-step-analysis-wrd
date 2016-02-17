@@ -36,7 +36,7 @@
 
 #include "core-util/SharedPointer.h"
 
-#include "myotest-step-analysis-library/wrd_public.h"
+#include "myotest-library-step-analysis/wrd_public.h"
 
 class StepAnalysisTable : public UIView::Array
 {
