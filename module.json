@@ -14,8 +14,8 @@
   "homepage": "www.myotest.com",
   "license": "Apache-2.0",
   "dependencies": {
-    "uiframework": "~2.0.0",
-    "wrd-myotest-library-feeder": "^1.0.0",
+    "uiframework": "^4.0.0",
+    "wrd-myotest-library-feeder": "^2.0.0",
     "myotest-library-step-analysis": "^1.0.0"
   }
 }
