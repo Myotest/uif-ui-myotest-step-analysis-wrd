@@ -1,30 +1,30 @@
 /* **************************************************************************
 *
 *
-     __  __             _            _      _____             
-    |  \/  |           | |          | |    / ____|    /\      
-    | \  / |_   _  ___ | |_ ___  ___| |_  | (___     /  \     
-    | |\/| | | | |/ _ \| __/ _ \/ __| __|  \___ \   / /\ \    
-    | |  | | |_| | (_) | ||  __/\__ \ |_   ____) | / ____ \ _ 
+     __  __             _            _      _____
+    |  \/  |           | |          | |    / ____|    /\
+    | \  / |_   _  ___ | |_ ___  ___| |_  | (___     /  \
+    | |\/| | | | |/ _ \| __/ _ \/ __| __|  \___ \   / /\ \
+    | |  | | |_| | (_) | ||  __/\__ \ |_   ____) | / ____ \ _
     |_|  |_|\__, |\___/ \__\___||___/\__| |_____(_)_/    \_(_)
-             __/ |                                            
-            |___/                                             
+             __/ |
+            |___/
 *
 * Copyright (c) 2004-2016 Myotest SA
 *
-* PackageLicenseDeclared: Apache-2.0 
-* 
-* Licensed under the Apache License, Version 2.0 (the "License"); 
-* you may not use this file except in compliance with the License. 
-* You may obtain a copy of the License at 
-* 
-*     http://www.apache.org/licenses/LICENSE-2.0 
-* 
-* Unless required by applicable law or agreed to in writing, software 
-* distributed under the License is distributed on an "AS IS" BASIS, 
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-* See the License for the specific language governing permissions and 
-* limitations under the License. 
+* PackageLicenseDeclared: Apache-2.0
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
 ****************************************************************************/
 
 #include "uif-ui-myotest-step-analysis-wrd/StepAnalysisTable.h"
@@ -55,7 +55,7 @@ SharedPointer<UIView> StepAnalysisTable::viewAtIndex(uint32_t index) const
                             break;
 
         case CELL_WALKING_STEPS_VALUE:
-                            textMonitorViewWalkStep = new UITextMonitorView<int32_t>(&myoAPI_getWalkingStepCounter,"%4d", &Font_Menu, 500);
+                            textMonitorViewWalkStep = new UITextMonitorView<int32_t>(&myoAPI_getWalkingStepCounter,"%4d", &Font_Menu, 100);
                             cell = (UITextView*)textMonitorViewWalkStep;
                             break;
 
@@ -64,7 +64,7 @@ SharedPointer<UIView> StepAnalysisTable::viewAtIndex(uint32_t index) const
                             break;
 
         case CELL_RUNNING_STEPS_VALUE:
-                            textMonitorViewRunStep = new UITextMonitorView<int32_t>(&myoAPI_getRunningStepCounter,"%4d", &Font_Menu, 500);
+                            textMonitorViewRunStep = new UITextMonitorView<int32_t>(&myoAPI_getRunningStepCounter,"%4d", &Font_Menu, 100);
                             cell = (UITextView*)textMonitorViewRunStep;
                             break;
 
